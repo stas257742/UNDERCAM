@@ -1,9 +1,109 @@
 @import "app/sass/_libs.sass"
 
-body
- background-color: #555555
+html, body 
+  font-family: "Exo 2 Medium", "Cuprum", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
 
- h1
-  color: #ffffff;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  box-sizing: border-box;
 
 
+*, *::before, *::after 
+  box-sizing: inherit;
+
+
+a 
+  vertical-align: top;
+  text-decoration: none;
+  color: #111111;
+  cursor: pointer;
+
+img 
+    display: block; 
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+label 
+  cursor: pointer;
+
+.visually-hidden 
+  position: absolute;
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  border: 0;
+
+
+h1, h2, h3, h4, h5, h6, p, ul, li 
+  font-weight: 400;
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+.header
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 20px 0 20px 0;
+  margin: 0 10px 60px 10px;
+
+  border-bottom: 2px solid #000000;
+
+  .logo
+    width: 195px;
+    height: 45px;
+  
+  .right-menu
+    display: flex;
+    align-items: center;
+
+  
+.lang 
+  margin-right: 21px;
+
+  .pressed
+    color: #818181;
+
+.telephone 
+  margin-right: 23px;
+
+.envelope
+  margin-right: 18px;
+
+.main
+  margin: 0 10px 0 10px;
+
+.slider
+  width: 100%;
+  height: 425px;
+
+  background-color: #dc9561;
+
+  .slider-description
+    display: block;
+
+    width: 300px;
+    height: 167px;
+
+    

@@ -106,5 +106,6 @@ gulp.task('watch', async function (){                  // WATCH
     gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
 });
 
+gulp.task('watch1', gulp.parallel('sass',  'browser-sync', 'watch'))
 gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts',  'browser-sync', 'watch'))
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'))
