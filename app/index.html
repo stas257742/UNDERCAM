@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>UNDERCAM</title>
-  <link href="css/main.css" rel="stylesheet" type="text/css"> <!-- Подключаем CSS -->
+  <link href="css/main.css" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
     <div class="logo">
-      <img alt="Логотип" src="img/index_html/UNDERCAM.jpg" width="195" height="45">
+      <img class="logo__img" alt="Логотип" src="img/index_html/UNDERCAM.jpg" width="195" height="45">
     </div>
     <div class="right-menu">
       <div class="lang">
@@ -32,21 +32,153 @@
 
   <main class="main">
     <h1 class="visually-hidden">UNDERCAM</h1>
-    <section class="slider">
-      <div class="wrapper-description">
-        <p class="slider__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore
-          magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-          facilisis. 
-        </p>
-        <a class="slider__a" href="#">Подробнее</a>
+    <section class="section-slider">
+      <h2 class="visually-hidden">Слайдер с новостями</h2>
+      <article class="slider">
+        <button class="slider-button slider-button-left" type="button" aria-label="Листать баннер влево"></button>
+        <button class="slider-button slider-button-right" type="button" aria-label="Листать баннер вправо"></button>
+        <input class="visually-idden" type="radio" id="btn-1" name="toggle" checked>
+        <input class="visually-idden" type="radio" id="btn-2" name="toggle">
+        <input class="visually-idden" type="radio" id="btn-3" name="toggle">
+        <div class="slider-controls">
+          <label for="btn-1" aria-label="Переключение слайдов"></label>
+          <label for="btn-2" aria-label="Переключение слайдов"></label>
+          <label for="btn-3" aria-label="Переключение слайдов"></label>
+        </div>
+        <div class="slider__flex">
+          <p class="slider__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore
+            magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+            facilisis.
+          </p>
+          <a class="slider__button" href="#">Подробнее</a>
+        </div>
+      </article>
+    </section>
+    <section class="section">
+      <h2 class="h2">Проекты</h2>
+      <div class="section__wrapper">
+        <article class="project__article number-1"></article>
+        <article class="project__article number-2"></article>
+        <article class="project__article number-3"></article>
+        <article class="project__article number-4"></article>
+        <article class="project__article number-5"></article>
+        <article class="project__article number-6"></article>
+        <article class="project__article number-7"></article>
+        <article class="project__article number-8"></article>
       </div>
+      <button class="see-more">УВИДЕТЬ БОЛЬШЕ</button>
+    </section>
+    <section class="section">
+      <h2 class="h2">Услуги</h2>
+      <div class="section__wrapper">
+        <article class="service__article">Производство фото контента</article>
+        <article class="service__article">Производство видео контента</article>
+        <article class="service__article">Производство рекламного ролика</article>
+        <article class="service__article">Коммерческая редактура</article>
+        <article class="service__article">Моушн-дизайн</article>
+        <article class="service__article">Корпоративные ролики</article>
+        <article class="service__article">Производство музыкального клипа</article>
+        <article class="service__article">Ведение социальных сетей</article>
+        <article class="service__article">Купить готовый ролик</article>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="h2">Команда</h2>
+      <ul class="persons">
+        <li class="person"></li>
+        <li class="person"></li>
+        <li class="person"></li>
+        <li class="person"></li>
+        <li class="person"></li>
+        <li class="person"></li>
+      </ul>
+      <div class="video"></div>
+      <p class="command-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+        maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+        viverra maecenas accumsan lacus vel facilisis.
+      </p>
+    </section>
+    <section class="section">
+      <h2 class="h2">Отзывы</h2>
+      <article class="wrapper-reviews">
+        <div class="reviews-img"></div>
+        <p class="rewiews__p">Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+          viverra maecenas accumsan lacus vel facilisis. Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod
+          tempor incididunt ut labore e</p>
+      </article>
+      <button class="see-more">ЕЩЁ</button>
     </section>
   </main>
 
-  <footer>
-
+  <footer class="footer">
+    <div class="footer-wrapper__left">
+      <p class="license-text">Текст про лицензию
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amet, consectetur adipiscing
+      </p>
+    </div>
+    <div class="footer-wrapper__center">
+      <img class="footer-logo" alt="Логотип" src="img/index_html/logo-footer.jpg" width="250" height="58">
+      <ul class="social-block">
+        <li>
+          <a><img alt="VK" width="35" height="35" src="img/index_html/vk.png"> </a>
+        </li>
+        <li>
+          <a><img alt="Instagram" width="35" height="35" src="img/index_html/instagram.png"></a>
+        </li>
+        <li>
+          <a><img alt="geo" width="35" height="35" src="img/index_html/geo.png"></a>
+        </li>
+        <li>
+          <a><img alt="mail" width="35" height="35" src="img/index_html/mail.png"></a>
+        </li>
+        <li>
+          <a><img alt="utub" width="35" height="35" src="img/index_html/utub.png"></a>
+        </li>
+        <li>
+          <a><img alt="telegram" width="35" height="35" src="img/index_html/telegram.png"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-wrapper__right">
+      <a class="footer-telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
+    </div>
   </footer>
+
+  <section class="menu-popup">
+    <div class="menu-popup__header">
+      <div class="menu-popup__header-logo">
+        <img class="footer-logo__img" alt="Логотип" src="img/index_html/undercam111111.jpg" width="195" height="45">
+      </div>
+      <div class="menu-popup__right-menu">
+        <div class="lang">
+          <a class="pressed" href="#">RU</a>
+          <a class="en" href="#">EN</a>
+        </div>
+        <a class="menu-popup__telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
+          <span class="envelope-span">
+            <a href="#"><img class="envelope-span__img" alt="Нажмите для вызова формы обратной связи" src="img/index_html/envelope111111.png" width="24" height="18"></a>
+          </span>
+          <span class="modal-close"></span>
+      </div>
+    </div>
+    <div class="main-menu">
+      <ul>
+        <li>Главная</li>
+        <li>Услуги</li>
+        <li>Проекты</li>
+        <li>О нас</li>
+        <li>Наши клиенты</li>
+        <li>Отзывы</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
+  </section>
 
 </html>
 </body>
