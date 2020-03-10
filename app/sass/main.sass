@@ -128,17 +128,12 @@ ul, li
 .lang 
   min-width: 60px
   white-space: nowrap
-  margin-right: 21px
+  margin-right: 21px 
 
-  a
-    display: inline-block
-    vertical-align: top
-    font-size: 18px
-    line-height: 24px
-    font-weight: normal
-
-  .pressed
+  .ru
     color: #818181
+
+    margin-right: 14px
 
 .telephone 
   color: #0b0b0b
@@ -456,54 +451,6 @@ ul, li
 /* MENU-POPUP */
 
 
-.header
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-  padding: 20px 0 20px 0
-  margin: 0 10px 60px 10px
-
-  border-bottom: 2px solid #000000
-  
-  .right-menu
-    display: flex
-    align-items: center
-
-
-
-.logo__img
-  width: 195px
-  height: 45px
-
-.lang 
-  min-width: 60px
-  white-space: nowrap
-  margin-right: 21px
-
-  a
-    display: inline-block
-    vertical-align: top
-    font-size: 18px
-    line-height: 24px
-    font-weight: normal
-
-  .pressed
-    color: #818181
-
-.telephone 
-  color: #0b0b0b
-  white-space: nowrap
-
-  margin-right: 23px
-
-.envelope
-  min-width: 41px
-  margin-right: 18px
-
-.burger-menu
-    min-width: 41px
-
 
 
 
@@ -518,9 +465,9 @@ ul, li
   left: 0
 
   width: 100%
-  height: auto
+  height: 100%
 
-  padding: 0 10px 100px 10px
+  padding: 0 10px 0 10px
 
   background-color: #4c4c4c
 
@@ -531,35 +478,38 @@ ul, li
 
   width: 100%
 
-  margin: 0 10px 0 10px
   padding: 20px 0 20px 0
+  margin: 0 10px 0 10px
 
   border-bottom: 2px solid #ffffff
-  
-  .right-menu
-    display: flex
-    justify-content: flex-end
-    align-items: center
-
-  .pressed 
-    color: #a7a7a7
-
-  .en
-    color: #585858
 
 .menu-popup__header-logo
     width: 195px
     height: 45px
 
-.footer-logo__img
+.menu-popup-logo__img
   width: 195px
   height: 45px
 
 .menu-popup__right-menu
-  dipslay: flex
+  display: flex
+  align-items: center
+
+.menu-popup__lang
+  white-space: nowrap
+
+  min-width: 60px
+
+  margin-right: 21px
   
+.menu-popup__ru 
+  color: #a7a7a7
+
+  margin-right: 10px
+
 .menu-popup__telephone
   color: #ffffff
+  white-space: nowrap
 
   margin-right: 23px
 
@@ -597,10 +547,10 @@ ul, li
   position: absolute
   content: ""
   top: 19px
-  left: 11px
+  left: 9px
     
-  width: 20px
-  height: 3px
+  width: 24px
+  height: 4px
 
   background-color: #ffffff
 
@@ -612,3 +562,41 @@ ul, li
 .modal-close::after
   transform: rotate(-45deg)
   
+.wrapper__menu-list
+  display: flex
+  justify-content: center
+  align-items: center
+  
+  width: 100%
+  height: 100%
+  
+.menu-list
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  margin-top: -50px
+
+.menu-list__item
+  font-size: 26px
+  line-height: 24px
+
+  margin-top: 25px
+
+  a
+    color: #ffffff
+  
+.menu-list__items:nth-child(1)
+  margin-top: 0
+
+
+
+
+
+/* CONTACTS */
+
+
+
+
+
