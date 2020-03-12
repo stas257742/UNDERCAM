@@ -99,22 +99,48 @@ ul, li
 
 
 .header
+  position: fixed
+  top: 0
+  left: 0
   display: flex
   justify-content: space-between
   align-items: center
+  z-index: 1
 
-  padding: 20px 0 20px 0
-  margin: 0 10px 60px 10px
+  width: calc(100vw - 37px)
+  height: 85px
 
-  border-bottom: 2px solid #000000
+  padding: 20px 0px 
+  margin: 0 10px
 
-  .logo
-    width: 195px
-    height: 45px
+  border-bottom: 2px solid #111111
+
+.header-visible
+  visibility: visible
+  transform: translateY(0)
+  transition: transform .4s,visibility .4s step-start,-webkit-transform .4s;
+  transition-property: transform, visibility, -webkit-transform;
+  transition-duration: 0.4s, 0.4s, 0.4s;
+  transition-timing-function: ease, step-start, ease;
+  transition-delay: 0s, 0s, 0s;
+
+.header-unvisible
+  visibility: hidden
+  transform: translateY(-100%)
+  transition: transform .4s,visibility .4s step-end,-webkit-transform .4s;
+  transition-property: transform, visibility, -webkit-transform;
+  transition-duration: 0.4s, 0.4s, 0.4s;
+  transition-timing-function: ease, step-end, ease;
+  transition-delay: 0s, 0s, 0s;
+
+.logo
+  width: 195px
+  height: 45px
   
-  .right-menu
-    display: flex
-    align-items: center
+.right-menu
+  display: flex
+  justify-content: center
+  align-items: center
 
 .logo
   min-width: 195px
@@ -162,7 +188,7 @@ ul, li
   margin: 0 10px 0 10px
 
 .section-slider
-  margin: 60px 0 60px 0
+  margin: 85px 0 60px 0
   
 .slider
   display: flex
@@ -448,7 +474,7 @@ ul, li
 
 
 
-/* MENU-POPUP */
+/* Меню при нажатии */
 
 
 
@@ -470,6 +496,7 @@ ul, li
   padding: 0 10px 0 10px
 
   background-color: #4c4c4c
+  display: none
 
 .menu-popup__header
   display: flex
@@ -533,13 +560,13 @@ ul, li
 
 .modal-close
   position: relative
-  z-index: 3
 
   width: 41px
   height: 41px
 
   background-color: #a7a7a7
   
+  border: none
   border-radius: 50%
 
 .modal-close::before,
@@ -594,9 +621,345 @@ ul, li
 
 
 
-/* CONTACTS */
+/* Наши контакты */
 
 
 
 
 
+.contacts
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  position: fixed
+  z-index: 3
+  top: calc(50% - 12.5vw)
+  left: calc(50% - 25vw)
+
+  width: 50vw
+  height: 25vw
+
+  padding: 0 10px 0 10px
+
+  background-color: #4c4c4c
+  display: none
+
+.contacts__h2
+  margin-top: 4vw
+
+.wrapper-contacts
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.contacts__h2,
+.contacts__tel,
+.contacts__mail,
+.contacts__social
+  font-size: 18px
+  line-height: 24px
+  color: #ffffff
+
+.contacts__adress
+  font-size: 14px
+  line-height: 24px
+  color: #ffffff
+
+.contacts__tel,
+.contacts__mail,
+.contacts__social
+  margin-top: 1vw
+  
+.contacts__social-block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  
+  min-width: 20vw
+
+  margin-top: 1.5vw
+
+
+.contacts-close
+  position: absolute
+  content: ""
+
+  top: 10px
+  right: 10px
+
+  width: 35px
+  height: 35px
+
+  background-color: #ffffff
+  
+  border: none
+  border-radius: 50%
+
+.contacts-close::before,
+.contacts-close::after
+  position: absolute
+  content: ""
+  top: 16px
+  left: 7px
+    
+  width: 22px
+  height: 4px
+
+  background-color: #4c4c4c
+
+  border-radius: 2px
+
+.contacts-close::before
+  transform: rotate(45deg)
+
+.contacts-close::after
+  transform: rotate(-45deg)
+  
+
+
+
+
+/* Форма обратной связи */
+
+
+
+
+
+
+.feedback-form
+  visibility: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  position: fixed
+  z-index: 3
+  top: calc(45% - 20vw)
+  left: calc(50% - 25vw)
+
+  min-width: 50vw
+  height: 40vw
+
+  padding: 0 20px 10px 20px
+
+  background-color: #4c4c4c
+
+.feedback-form-active
+  
+.feedback-form-visible
+  visibility: visible
+
+.user-form
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  width: 100%
+
+  .button-send
+    margin-top: 3vw
+  
+.wrapper__label_and_input
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  width: 100%
+
+  margin-top: 5vw
+
+.wrapper-tel,
+.wrapper-name,
+.wrapper-email
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 17px
+  line-height: 24px
+  color: #ffffff
+  
+.user-tel,
+.user-name,
+.user-email
+  text-align: center
+
+  min-width: 12vw 
+  height: 2vw
+  
+  margin-top: 10px
+
+  border: none
+  border-radius: 5px
+
+.button-send
+  font-size: 15px
+  line-height: 24px
+  text-align: center
+  color: #ffffff
+
+  min-width: 7vw
+  
+  padding: 1px 12px 3px 12px
+  
+  background-color: #929292
+  
+  border: none
+  border-radius: 7px
+  
+.feedback-form__p
+  font-size: 18px
+  line-height: 24px
+  color: #ffffff
+
+  margin-top: 6vw
+
+.feedback-form__social-block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  
+  min-width: 20vw
+
+  margin-top: 1.5vw
+  margin-bottom: 4vw
+
+.white-line
+  min-width: 100%
+  min-height: 2px
+
+  background-color: #ffffff
+
+.feedback-form__contacts
+  font-size: 18px
+  line-height: 24px
+  color: #ffffff
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.feedback-form__contacts_p
+  margin-top: 1.5vw
+  
+.feedback-form__contacts_tel
+  margin-top: 0.5vw
+  
+.feedback-form__contacts_adress
+  font-size: 14px
+  line-height: 24px
+  color: #ffffff
+
+  margin-top: 0.5vw
+
+
+.feedback-form__close
+  position: absolute
+  content: ""
+
+  top: 10px
+  right: 10px
+
+  width: 35px
+  height: 35px
+
+  background-color: #ffffff
+  
+  border: none
+  border-radius: 50%
+
+.feedback-form__close::before,
+.feedback-form__close::after
+  position: absolute
+  content: ""
+  top: 16px
+  left: 7px
+    
+  width: 22px
+  height: 4px
+
+  background-color: #4c4c4c
+
+  border-radius: 2px
+
+.feedback-form__close::before
+  transform: rotate(45deg)
+
+.feedback-form__close::after
+  transform: rotate(-45deg)
+  
+
+
+
+.modal-close 
+  cursor: pointer
+  position: absolute
+  top: 9px
+  right: 9px
+
+  width: 21px
+  height: 21px
+
+  background-image: url(../img/svg-technomart/icon-close.svg)
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-color: transparent
+
+  border: 0
+  outline: 0
+
+
+.modal-show 
+  display: block
+
+
+
+  
+.modal-error  /*класс ошибки анимации*/
+  animation: shake 0.6s
+
+
+@-webkit-keyframes fadeInDown 
+  0%              
+  opacity: 0
+  transform: translate3d(0px, -100%, 0px)
+            
+  100% 
+  opacity: 1
+  transform: none
+            
+
+
+@keyframes fadeInDown  /* анимация открытия*/
+  0%        
+  opacity: 0
+  transform: translate3d(0px, -100%, 0px)
+            
+  100% 
+  opacity: 1
+  transform: none
+            
+
+
+@keyframes shake /*анимация ошибки*/
+  0%,
+  100% 
+    transform: translateX(0)
+  
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% 
+    transform: translateX(-10px)
+  
+
+  20%,
+  40%,
+  60%,
+  80% 
+    transform: translateX(10px)

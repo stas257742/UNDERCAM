@@ -19,11 +19,11 @@
                 <a class="en">EN</a>
             </div>
             <a class="telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
-            <a class="envelope">
+            <a href="#" class="envelope">
                 <img alt="Нажмите для вызова формы обратной связи" src="img/index_html/envelope.png" width="41" height="41">
             </a>
             <div class="burger-menu">
-                <a>
+                <a href="#">
                     <img alt="Меню сайта" src="img/index_html/burger.png" width="41" height="41">
                 </a>
             </div>
@@ -115,22 +115,22 @@
             <img class="footer-logo" alt="Логотип" src="img/index_html/logo-footer.jpg" width="250" height="58">
             <ul class="social-block">
                 <li>
-                    <a><img alt="VK" width="35" height="35" src="img/index_html/vk.png"> </a>
+                    <a href="#"><img alt="VK" width="35" height="35" src="img/index_html/vk.png"> </a>
                 </li>
                 <li>
-                    <a><img alt="Instagram" width="35" height="35" src="img/index_html/instagram.png"></a>
+                    <a href="#"><img alt="Instagram" width="35" height="35" src="img/index_html/instagram.png"></a>
                 </li>
                 <li>
-                    <a><img alt="geo" width="35" height="35" src="img/index_html/geo.png"></a>
+                    <a href="#"><img alt="geo" width="35" height="35" src="img/index_html/geo.png"></a>
                 </li>
                 <li>
-                    <a><img alt="mail" width="35" height="35" src="img/index_html/mail.png"></a>
+                    <a href="#"><img alt="mail" width="35" height="35" src="img/index_html/mail.png"></a>
                 </li>
                 <li>
-                    <a><img alt="utub" width="35" height="35" src="img/index_html/utub.png"></a>
+                    <a href="#"><img alt="utub" width="35" height="35" src="img/index_html/utub.png"></a>
                 </li>
                 <li>
-                    <a><img alt="telegram" width="35" height="35" src="img/index_html/telegram.png"></a>
+                    <a href="#"><img alt="telegram" width="35" height="35" src="img/index_html/telegram.png"></a>
                 </li>
             </ul>
         </div>
@@ -139,7 +139,10 @@
         </div>
     </footer>
 
+    <!-- Меню при нажатии -->
+
     <section class="menu-popup">
+        <h2 class="visually-hidden">Меню сайта</h2>
         <div class="menu-popup__header">
             <div class="menu-popup__header-logo">
                 <img class="menu-popup-logo__img" alt="Логотип" src="img/index_html/undercam111111.jpg" width="195" height="45">
@@ -151,10 +154,10 @@
                 </div>
                 <a class="menu-popup__telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
                 <span class="envelope-span">
-          <a href="#"><img class="envelope-span__img" alt="Нажмите для вызова формы обратной связи"
-              src="img/index_html/envelope111111.png" width="24" height="18"></a>
-        </span>
-                <span class="modal-close"></span>
+                    <a href="#"><img class="envelope-span__img" alt="Нажмите для вызова формы обратной связи"
+                            src="img/index_html/envelope111111.png" width="24" height="18"></a>
+                </span>
+                <button class="modal-close"></button>
             </div>
         </div>
         <div class="wrapper__menu-list">
@@ -170,9 +173,92 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <!-- Наши контакты -->
 
+    <section class="contacts">
+        <h2 class="contacts__h2" class="contacts__p">Наши контакты</h2>
+        <div class="wrapper-contacts">
+            <p class="contacts__tel">8 (917) 256-75-87</p>
+            <p class="contacts__adress">г. Казань ул. Центральная д.7</p>
+            <p class="contacts__mail">forexample@mail.ru</p>
+            <p class="contacts__social">Наши мессенджеры и социальные сети:</p>
+        </div>
+        <ul class="contacts__social-block">
+            <li>
+                <a href="#"><img alt="VK" width="35" height="35" src="img/index_html/vk.png"> </a>
+            </li>
+            <li>
+                <a href="#"><img alt="Instagram" width="35" height="35" src="img/index_html/instagram.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="geo" width="35" height="35" src="img/index_html/geo.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="mail" width="35" height="35" src="img/index_html/mail.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="utub" width="35" height="35" src="img/index_html/utub.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="telegram" width="35" height="35" src="img/index_html/telegram.png"></a>
+            </li>
+        </ul>
+        <button class="contacts-close"></button>
     </section>
 
-</html>
+    <!-- Форма обратной связи -->
+
+    <section class="feedback-form feedback-form-active">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="user-form" action="http://" method="post">
+            <div class="wrapper__label_and_input">
+                <div class="wrapper-tel">
+                    <label for="user-tel">Введите ваш телефон:</label>
+                    <input class="user-tel" id="user-tel" type="text" name="login" placeholder="Телефон" autofocus>
+                </div>
+                <div class="wrapper-name">
+                    <label for="user-name">Введите ваше имя:</label>
+                    <input class="user-name" id="user-name" type="text" name="name" placeholder="Имя">
+                </div>
+                <div class="wrapper-email">
+                    <label for="user-email">Введите ваш e-mail:</label>
+                    <input class="user-email" id="user-email" type="email" name="email" placeholder="E-mail">
+                </div>
+            </div>
+            <button class="button-send" type="submit">Отправить</button>
+        </form>
+        <p class="feedback-form__p">Наши мессенджеры и социальные сети:</p>
+        <ul class="feedback-form__social-block">
+            <li>
+                <a href="#"><img alt="VK" width="35" height="35" src="img/index_html/vk.png"> </a>
+            </li>
+            <li>
+                <a href="#"><img alt="Instagram" width="35" height="35" src="img/index_html/instagram.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="geo" width="35" height="35" src="img/index_html/geo.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="mail" width="35" height="35" src="img/index_html/mail.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="utub" width="35" height="35" src="img/index_html/utub.png"></a>
+            </li>
+            <li>
+                <a href="#"><img alt="telegram" width="35" height="35" src="img/index_html/telegram.png"></a>
+            </li>
+        </ul>
+        <span class="white-line"></span>
+        <div class="feedback-form__contacts">
+            <p class="feedback-form__contacts_p">Наш телефон</p>
+            <p class="feedback-form__contacts_tel">8 (917) 256-75-87</p>
+            <p class="feedback-form__contacts_adress">г. Казань ул. Центральная д.7</p>
+        </div>
+        <button class="feedback-form__close" type="button"></button>
+    </section>
+
+    <script src="js/script.js"></script>
+
 </body>
+
+</html>
