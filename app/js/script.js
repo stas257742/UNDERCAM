@@ -40,6 +40,7 @@ close.addEventListener("click", function(evt) { // поймали событие
     evt.preventDefault(); // отменили стандартное действие браузера;
     popup.classList.remove("feedback-form-visible"); // убрали у попапа класс "modal-show";
     popup.classList.remove("feedback-form-visible");
+    popup.classList.remove("modal-error");
 
 })
 

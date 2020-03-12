@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>UNDERCAM</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header header-visible">
+    <header class="header">
         <div class="logo">
             <img class="logo__img" alt="Логотип" src="img/index_html/UNDERCAM.jpg" width="195" height="45">
         </div>
@@ -19,16 +20,15 @@
                 <a class="en">EN</a>
             </div>
             <a class="telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
-            <a class="envelope">
+            <a href="#" class="envelope">
                 <img alt="Нажмите для вызова формы обратной связи" src="img/index_html/envelope.png" width="41" height="41">
             </a>
             <div class="burger-menu">
-                <a>
+                <a href="#">
                     <img alt="Меню сайта" src="img/index_html/burger.png" width="41" height="41">
                 </a>
             </div>
         </div>
-        </dclass="header">
     </header>
 
     <main class="main">
@@ -155,9 +155,9 @@
                 </div>
                 <a class="menu-popup__telephone" href="tel:+79172567587">8 (917) 256-75-87</a>
                 <span class="envelope-span">
-          <a href="#"><img class="envelope-span__img" alt="Нажмите для вызова формы обратной связи"
-              src="img/index_html/envelope111111.png" width="24" height="18"></a>
-        </span>
+                    <a href="#"><img class="envelope-span__img" alt="Нажмите для вызова формы обратной связи"
+                            src="img/index_html/envelope111111.png" width="24" height="18"></a>
+                </span>
                 <button class="modal-close"></button>
             </div>
         </div>
@@ -209,7 +209,7 @@
 
     <!-- Форма обратной связи -->
 
-    <section class="feedback-form">
+    <section class="feedback-form feedback-form-active">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="user-form" action="http://" method="post">
             <div class="wrapper__label_and_input">
@@ -255,8 +255,11 @@
             <p class="feedback-form__contacts_tel">8 (917) 256-75-87</p>
             <p class="feedback-form__contacts_adress">г. Казань ул. Центральная д.7</p>
         </div>
-        <button class="feedback-form__close"></button>
+        <button class="feedback-form__close" type="button"></button>
     </section>
 
-</html>
+    <script src="js/script.js"></script>
+
 </body>
+
+</html>
