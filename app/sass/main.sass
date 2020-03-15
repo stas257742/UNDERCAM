@@ -76,6 +76,19 @@ ul, li
 .section
   margin: 60px 0 60px 0
 
+.section__wrapper
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  flex-shrink: 0
+  flex-grow: 0
+  position: relative
+
+  width: 100%
+  max-width: 1920px
+
+  margin: 0 auto
+
 .h2
   text-align: center
 
@@ -190,9 +203,9 @@ ul, li
   margin: 115px 0 60px 0
   
 .slider
+  position: relative
   display: flex
   justify-content: flex-end
-  position: relative
 
   width: 100%
   min-height: 425px
@@ -202,122 +215,128 @@ ul, li
   background-color: #dc9561
   border-top: 1px solid transparent
 
-  .slider-button
-    position: absolute
-    content: ""
+.slider-button
+  position: absolute
+  content: ""
 
-    width: 27px
-    height: 41px
+  width: 27px
+  height: 41px
 
-    outline: none
-    border: none
+  outline: none
+  border: none
 
-  .slider-button-left
+.slider-button-left
 
-    top: 45%
-    left: 20px
+  top: 45%
+  left: 20px
 
-    background-image: url(../img/index_html/slider-left.png) 
-    background-repeat: no-repeat 
-    background-position: 0 0
-    background-color: transparent
-
-
-  .slider-button-right
-
-    top: 45%
-    right: 20px
-
-    background-image: url(../img/index_html/slider-right.png) 
-    background-repeat: no-repeat 
-    background-position: 0 0
-    background-color: transparent
-
-  .slider-controls
-    position: absolute  
-    content: ""
-
-    bottom: 15px
-    left: 50%
+  background-image: url(../img/index_html/slider-left.png) 
+  background-repeat: no-repeat 
+  background-position: 0 0
+  background-color: transparent
 
 
-  .slider-controls label
-    display: inline-block
-    vertical-align: top
+.slider-button-right
 
-    width: 3px
-    height: 3px
+  top: 45%
+  right: 20px
 
-    margin: 4px
+  background-image: url(../img/index_html/slider-right.png) 
+  background-repeat: no-repeat 
+  background-position: 0 0
+  background-color: transparent
 
-    background-color: #111111;
-
-    border-radius: 50%
-
-  .slider-controls label:before
-    position: absolute  
-    content: ""
-    vertical-align: top
-
-    width: 13px
-    height: 13px
-
-    margin: -5px 0 0 -5px
-
-    background-color: transparent;
-
-    border: 2px solid #ffffff
-    border-radius: 50%
-
-  #btn-1:checked ~ .slider-controls label[for="btn-1"],
-  #btn-2:checked ~ .slider-controls label[for="btn-1"],
-  #btn-3:checked ~ .slider-controls label[for="btn-1"] 
-      
-
-  .slider__flex
-    width: 300px
-    height: auto
-  
-    margin: 130px 95px 0 0
-  
-  .slider__description
-    display: block
-    width: 300px
-
-    margin: 0px 0px 50px 0px
-
-
-  .slider__button
-    display: block
-    text-align: center
-    word-wrap: break-word
-
-    font-size: 15px
-    line-height: 24px
-    font-weight: normal
-    color: #111111
-
-    max-width: 100px
-    min-height: 30px
-
-    margin: 50px 0 10px 0px
-    padding: 1px 1px 5px 1px
-
-    background-color: #ffffff
-    border-radius: 7px
-
-.section__wrapper
+.slider-controls
   display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  flex-shrink: 0
-  flex-grow: 0
-  position: relative
+  justify-content: center
+  align-items: center
+  position: absolute  
+  content: ""
 
-  width: 100%;
-  max-width: 1920px;
+  bottom: 15px
+  left: calc(50% - 35px)
 
-  margin: 0 auto
+  width: 70px
+
+
+.slider-controls label
+  display: inline-block
+  vertical-align: top
+
+  min-width: 4px
+  min-height: 4px
+
+  margin: 10px
+
+  background-color: #111111
+
+  border-radius: 50%
+
+.slider-controls label::before
+  position: absolute  
+  content: ""
+  vertical-align: top
+
+  width: 16px
+  height: 16px
+
+  margin: -6px 0 0 -6px
+
+  background-color: transparent
+
+  border: 0px solid #ffffff
+  border-radius: 50%
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"]
+  width: 4px
+  height: 4px
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"]::before,
+#btn-2:checked ~ .slider-controls label[for="btn-2"]::before,
+#btn-3:checked ~ .slider-controls label[for="btn-3"]::before
+  border: 2px solid #ffffff
+
+.slider-slides
+  display: flex
+  justify-content: center
+  align-items: center
+
+  min-width: 100vw
+  min-height: 100vh
+
+  outline: 1px solid #000000
+
+.slider__flex
+  width: 300px
+  height: auto
+  
+  margin: 130px 95px 0 0
+  
+.slider__description
+  display: block
+  width: 300px
+
+  margin: 0px 0px 50px 0px
+
+
+.slider__button
+  display: block
+  text-align: center
+  word-wrap: break-word
+
+  font-size: 15px
+  line-height: 24px
+  font-weight: normal
+  color: #111111
+
+  max-width: 100px
+  min-height: 30px
+
+  margin: 50px 0 10px 0px
+  padding: 1px 1px 5px 1px
+
+  background-color: #ffffff
+  border-radius: 7px
 
 .project__article
   width: 22vw
