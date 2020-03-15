@@ -1,7 +1,55 @@
+/* Скрытие меню */
+
+var header = $('.header'),
+    scrollPrev = 0;
+
+$(window).scroll(function() {
+    var scrolled = $(window).scrollTop();
+
+    if (scrolled > 100 && scrolled > scrollPrev) {
+        header.addClass('out');
+    } else {
+        header.removeClass('out');
+    }
+    scrollPrev = scrolled;
+});
+
+
+var actionBookmark = document.querySelectorAll(".menu-burger"); // 1.
+console.log(actionBookmark);
+console.log(actionBookmark.length);
+
+var popupBasket = document.querySelector(".menu-popup");
+
+var close = popupBasket.querySelector(".modal-close");
+
+for (var i = 0; i < actionBookmark.length; i++) {
+    actionBookmark[i].addEventListener("click", function(evt) { //2. 
+        evt.preventDefault();
+        popupBasket.classList.add("menu-popup-visible");
+    })
+}
+
+close.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupBasket.classList.remove("menu-popup-visible");
+
+    window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (popupBasket.classList.contains("menu-popup-visible")) {
+                popupBasket.classList.remove("menu-popup-visible");
+            }
+        }
+    })
+})
+
 // Форма обратной связи-скрипт
 
 
-var link = document.querySelector(".envelope"); // нашли кнопку по которой будет производиться клик и записали её в переменную "link";
+var link = document.querySelector(".envelope-span"); // нашли кнопку по которой будет производиться клик и записали её в переменную "link";
+var link1 = document.querySelector(".envelope"); // нашли кнопку по которой будет производиться клик и записали её в переменную "link";
+
 console.log(link)
 var popup = document.querySelector(".feedback-form"); // нашли класс формы по которому форма будет показываться;
 var close = popup.querySelector(".feedback-form__close"); // нашли кнопку закрытия формы и записали ёё в переменную;
@@ -20,8 +68,9 @@ try {
     isStorageSupport = false;
 }
 
-if (link === null) {
+if (link === null || link1 === null) {
     link = 1;
+    link1 = 1;
 }
 console.log(link)
 
@@ -36,10 +85,22 @@ link.addEventListener("click", function(evt) { // поймали событие 
     }
 })
 
+link1.addEventListener("click", function(evt) { // поймали событие клика по кнопке;
+    evt.preventDefault(); // отменили действие браузера по умолчанию для кнопки;
+    popup.classList.add("feedback-form-visible"); // добавили форме класс который отвечает за показ-форма показалась;
+    if (storage) { //если storage имеет значаение;
+        login.value = storage; // тогда присваиваем login значание storage;
+        email.focus; //если нет-сместили фокус на поле email;
+    } else {
+        login.focus; // если storage не имеет значения ставим фокус на ввод имени;
+    }
+})
+
 close.addEventListener("click", function(evt) { // поймали событие клика по кнопке "Закрыть";
     evt.preventDefault(); // отменили стандартное действие браузера;
     popup.classList.remove("feedback-form-visible"); // убрали у попапа класс "modal-show";
     popup.classList.remove("feedback-form-visible");
+    popup.classList.remove("modal-error");
 
 })
 
