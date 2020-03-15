@@ -118,6 +118,8 @@ ul, li
   padding: 20px 0px 
   margin: 0 10px
 
+  background-color: rgba(255,255,255,0)
+  
   border-bottom: 2px solid #111111
 
   visibility: visible
@@ -130,7 +132,6 @@ ul, li
   transform: translateY(-100%)
   transition: all .3s ease
  
-
 .logo
   width: 195px
   height: 45px
@@ -186,7 +187,7 @@ ul, li
   margin: 0 10px 0 10px
 
 .section-slider
-  margin: 85px 0 60px 0
+  margin: 115px 0 60px 0
   
 .slider
   display: flex
@@ -494,7 +495,7 @@ ul, li
 
   padding: 0 10px 0 10px
 
-  background-color: #4c4c4c
+  background-color: rgba(76,76,76,1)
 
   animation-duration: 0.55s
   animation-fill-mode: both
@@ -636,6 +637,7 @@ ul, li
 
 .contacts
   display: flex
+  display: none
   flex-direction: column
   justify-content: flex-start
   align-items: center
@@ -650,7 +652,11 @@ ul, li
   padding: 0 10px 0 10px
 
   background-color: #4c4c4c
-  display: none
+
+  box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2)
+
+.contacts-visible
+  display: flex
 
 .contacts__h2
   margin-top: 4vw
@@ -693,7 +699,6 @@ ul, li
   position: absolute
   content: ""
   cursor: pointer
-
 
   top: 10px
   right: 10px
@@ -751,12 +756,12 @@ ul, li
   min-width: 50vw
   height: 40vw
 
+  margin-top: 3vw
   padding: 0 20px 10px 20px
 
   background-color: #4c4c4c
 
-  box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);
-
+  box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2)
 
   animation-duration: 0.55s
   animation-fill-mode: both

@@ -108,6 +108,7 @@ ul, li {
   height: 85px;
   padding: 20px 0px;
   margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0);
   border-bottom: 2px solid #111111;
   visibility: visible;
   -webkit-transform: translateY(0);
@@ -177,7 +178,7 @@ ul, li {
   margin: 0 10px 0 10px; }
 
 .section-slider {
-  margin: 85px 0 60px 0; }
+  margin: 115px 0 60px 0; }
 
 .slider {
   display: -webkit-box;
@@ -677,6 +678,7 @@ ul, li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -700,7 +702,14 @@ ul, li {
   height: 25vw;
   padding: 0 10px 0 10px;
   background-color: #4c4c4c;
-  display: none; }
+  -webkit-box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);
+          box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2); }
+
+.contacts-visible {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .contacts__h2 {
   margin-top: 4vw; }
@@ -819,6 +828,7 @@ ul, li {
   left: calc(50% - 25vw);
   min-width: 50vw;
   height: 40vw;
+  margin-top: 3vw;
   padding: 0 20px 10px 20px;
   background-color: #4c4c4c;
   -webkit-box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);

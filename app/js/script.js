@@ -1,4 +1,8 @@
-/* Скрытие меню */
+/* Скрытие или раскрытие меню */
+
+
+
+
 
 var header = $('.header'),
     scrollPrev = 0;
@@ -6,13 +10,22 @@ var header = $('.header'),
 $(window).scroll(function() {
     var scrolled = $(window).scrollTop();
 
-    if (scrolled > 100 && scrolled > scrollPrev) {
+    if (scrolled > 1 && scrolled > scrollPrev) {
         header.addClass('out');
     } else {
         header.removeClass('out');
     }
     scrollPrev = scrolled;
 });
+
+
+
+
+
+/* Меню при нажатии */
+
+
+
 
 
 var actionBookmark = document.querySelectorAll(".menu-burger"); // 1.
@@ -44,7 +57,73 @@ close.addEventListener("click", function(evt) {
     })
 })
 
-// Форма обратной связи-скрипт
+
+
+
+/* Плавный переход по якорным ссылкам */
+
+
+
+
+
+$(document).ready(function() {
+    $(".wrapper__menu-list").on("click", "a", function(event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top,
+            asd = $('.menu-popup');
+        $('body,html').animate({
+            scrollTop: top
+        }, 900);
+        asd.removeClass('menu-popup-visible')
+    });
+});
+
+
+
+/* Контакты */
+
+
+
+
+
+var actionBookmarkk = document.querySelectorAll(".contacts-link"); // 1.
+console.log(actionBookmarkk);
+console.log(actionBookmarkk.length);
+
+var popupBaskett = document.querySelector(".contacts");
+
+var closee = popupBaskett.querySelector(".contacts-close");
+
+for (var i = 0; i < actionBookmarkk.length; i++) {
+    actionBookmarkk[i].addEventListener("click", function(evt) { //2. 
+        evt.preventDefault();
+        popupBaskett.classList.add("contacts-visible");
+    })
+}
+
+closee.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupBaskett.classList.remove("contacts-visible");
+
+    window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (popupBasket.classList.contains("contacts-visible")) {
+                popupBasket.classList.remove("contacts-visible");
+            }
+        }
+    })
+})
+
+
+
+
+
+/* Форма обратной связи-скрипт */
+
+
+
 
 
 var link = document.querySelector(".envelope-span"); // нашли кнопку по которой будет производиться клик и записали её в переменную "link";
