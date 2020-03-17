@@ -1,3 +1,23 @@
+/* Показ/скрытие блоков (увидеть больше) */
+
+
+
+
+
+$('#see-more').click(function() {
+    $('.block-slideToggle').slideToggle('slow');
+});
+
+
+
+
+
+/* Слайдер */
+
+
+
+
+
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);

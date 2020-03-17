@@ -5,7 +5,7 @@
 
 
 $('#see-more').click(function() {
-    $('.section__wrapper-hide').slideToggle('slow');
+    $('.block-slideToggle').slideToggle('slow');
 });
 
 

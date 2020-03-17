@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <!-- script jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -155,46 +158,160 @@
                 <span class="slider-dots_item" onclick="currentSlide(2)"></span>
                 <span class="slider-dots_item" onclick="currentSlide(3)"></span>
             </div>
-
-
-            <!-- <article class="slider">
-                <div class="slider-slides">
-                    <div class="wrapper-img-1">
-                        <img src="img/index_html/slider/perforator_1.jpg" alt="Картинка слайдера">
-                    </div>
-                    <div class="wrapper-img-2">
-                    </div>
-                </div>
-                <button class="slider-button slider-button-left" type="button" aria-label="Листать баннер влево"></button>
-                <button class="slider-button slider-button-right" type="button" aria-label="Листать баннер вправо"></button>
-                <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
-                <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
-                <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
-                <div class="slider-controls">
-                    <label for="btn-1" aria-label="Переключение слайдов"></label>
-                    <label for="btn-2" aria-label="Переключение слайдов"></label>
-                    <label for="btn-3" aria-label="Переключение слайдов"></label>
-                </div>
-                <div class="slider__flex">
-                    <p class="slider__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                    </p>
-                    <a class="slider__button" href="#">Подробнее</a>
-                </div>
-            </article> -->
         </section>
         <section class="section">
             <h2 class="h2" id="ankor-link__projects">Проекты</h2>
             <div class="section__wrapper">
-                <article class="project__article number-1"></article>
-                <article class="project__article number-2"></article>
-                <article class="project__article number-3"></article>
-                <article class="project__article number-4"></article>
-                <article class="project__article number-5"></article>
-                <article class="project__article number-6"></article>
-                <article class="project__article number-7"></article>
-                <article class="project__article number-8"></article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-1">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-2">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-3">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-4">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-5">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-6">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-7">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
+                <article class="project__article">
+                    <div class="card-image-holder">
+                        <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                    </div>
+                    <div class="card-back number-8">
+                        <h3>1</h3>
+                        <p>Съемка фото</p>
+                    </div>
+                </article>
             </div>
-            <button class="see-more">УВИДЕТЬ БОЛЬШЕ</button>
+            <div class="block-slideToggle">
+                <div class="section__wrapper section__wrapper-hide">
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-1">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-2">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-3">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-4">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-5">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-6">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-7">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                    <article class="project__article">
+                        <div class="card-image-holder">
+                            <img class="card-image-holder__image" src="img/index_html/slider/perforator_1.jpg" alt="Перфоратор" width="300" height="300">
+                        </div>
+                        <div class="card-back number-8">
+                            <h3>1</h3>
+                            <p>Съемка фото</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="see-more" id="see-more">УВИДЕТЬ БОЛЬШЕ</button>
         </section>
         <section class="section">
             <h2 class="h2" id="ankor-link__sesrvice">Услуги</h2>
@@ -386,8 +503,7 @@
         <button class="feedback-form__close" type="button"></button>
     </section>
 
-    <!-- script ajax  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
     <!-- Подключение общего файла JS -->
     <script src="js/script.js"></script>
