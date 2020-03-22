@@ -73,10 +73,6 @@ ul, li
   margin: 0
   padding: 0
 
-.section
-  margin: 40px 0 0px 0
-  padding: 1px 0px
-
 .h2
   display: flex
   justify-content: center
@@ -116,7 +112,7 @@ ul, li
   position: fixed
   top: 0
   left: 0
-  z-index: 2
+  z-index: 3
 
   width: calc(100vw - 37px)
   height: 85px
@@ -479,18 +475,33 @@ ul, li
 .persons
   display: flex
   justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
 
   width: 100%
 
   margin: 35px 0 20px 0
 
 .person
+  position: relative
+  overflow: hidden
+  
   width: 13vw
   height: 13vw
-
+  
   border: 1px solid #e9e4e4
   border-radius: 50%
   
+.person__img
+  position: absolute
+  content: ""
+  top: -2px
+  left: -2px
+  z-index: 0
+
+  width: 100%
+  height: auto
+
 .wrapper__video
   display: flex
   justify-content: space-between
@@ -502,28 +513,52 @@ ul, li
 
 .command-description
   font-size: 0.8rem
+
+  max-width: 50%
   
   margin-right: 20px
-
 
 .video
   width: 50%
   height: auto
 
+.section-reviews
+  margin: 40px 0 0px 0
+  padding: 1px 0px
 
 .wrapper-reviews
   display: flex
-  justify-content: space-between
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
 
   width: 100%
   height: auto
 
   margin: 35px 0 20px 0
 
-.reviews-img
-  min-width: 15vw
-  height: 15vw
+.person-reviews
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
 
+  margin-bottom: 2%
+
+.block-slideTogglee
+  display: none
+
+  margin: 0
+  padding: 0
+  
+  border: none
+  
+.person-reviews__img
+  overflow: hidden
+  
+  width: 15vw
+  height: 15vw
+  
   margin-right: 40px
 
   border: 1px solid #e9e4e4
@@ -534,7 +569,6 @@ ul, li
   justify-content: center
   align-items: center
   max-width: 80vw
-
 
 
 
@@ -1092,6 +1126,15 @@ ul, li
   .service__article
     width: 49% 
     height: 49vw
+  
+  .persons
+    justify-content: space-evenly
+
+  .person
+    width: 28vw
+    height: 28vw
+
+    margin-bottom: 5%
 
 @media (max-width: 600px) 
   .project__article
@@ -1105,3 +1148,9 @@ ul, li
   .service__article
     width: 90% 
     height: 90vw
+
+  .person
+    width: 30vw
+    height: 30vw
+
+    margin-bottom: 4%

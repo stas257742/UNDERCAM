@@ -7,10 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/flowplay/flowplayer-3.2.2.min.js"></script>
-    <!-- script flowplay -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- script jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- script VideoJS -->
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    <style type="text/css">
+        .vjs-default-skin {
+            color: #d9d9d9;
+        }
+        
+        .vjs-default-skin .vjs-play-progress,
+        .vjs-default-skin .vjs-volume-level {
+            background-color: #62a4c7
+        }
+        
+        .vjs-default-skin .vjs-control-bar,
+        .vjs-default-skin .vjs-big-play-button {
+            background: rgba(0, 0, 0, 0.75)
+        }
+        
+        .vjs-default-skin .vjs-slider {
+            background: rgba(0, 0, 0, 0.25)
+        }
+        
+        .vjs-default-skin .vjs-control-bar {
+            font-size: 66%
+        }
+    </style>
 
 </head>
 
@@ -389,41 +413,63 @@
         <section class="section-command">
             <h2 class="h2" id="ankor-link__about-us">Команда</h2>
             <ul class="persons">
-                <li class="person"></li>
-                <li class="person"></li>
-                <li class="person"></li>
-                <li class="person"></li>
-                <li class="person"></li>
-                <li class="person"></li>
-                <li class="person"></li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
+                <li class="person">
+                    <img src="img/index_html/slider/perforator_1.jpg" class="person__img" width="218" height="170">
+                </li>
             </ul>
             <div class="wrapper__video">
                 <p class="command-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum
                     dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                    Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor
+                    sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor
                 </p>
-                <video class="video" src="video/ag.mp4" poster="img/hasa11.jpg" controls></video>
-                <!-- <a href="video/ag.mp4" style="display: block; width: 560px; height: 315px;" id="player"></a>
-                <script type="text/javascript">
-                    flowplayer("player", "js/flowplay/flowplayer-3.2.2.min.js", {
-                        clip: {
-                            autoPlay: false,
-                            autoBuffering: true
-                        }
-                    });
-                </script> -->
+                <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                    <source src="video/ag.mp4" type='video/mp4'>
+                    <source src="MY_VIDEO.webm" type='video/webm'>
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web
+                        browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                            video</a></p>
+                </video>
             </div>
         </section>
-        <section class="section">
+        <section class="section-reviews">
             <h2 class="h2" id="ankor-link__reviews">Отзывы</h2>
-            <article class="wrapper-reviews">
-                <div class="reviews-img"></div>
-                <p class="rewiews__p">Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                    Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-            </article>
-            <button class="see-more">ЕЩЁ</button>
+            <div class="wrapper-reviews">
+                <div class="person-reviews">
+                    <div class="card-image-holder">
+                        <img src="img/index_html/slider/perforator_1.jpg" class="person-reviews__img" width="218" height="170">
+                    </div>
+                    <p class="rewiews__p">Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e
+                    </p>
+                </div>
+                <div class="block-slideTogglee">
+                    <div class="person-reviews">
+                        <img src="img/index_html/slider/perforator_1.jpg" class="person-reviews__img" width="218" height="170">
+                        <p class="rewiews__p">Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis. Текст отзыва Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="see-more" id="see-moree">ЕЩЁ</button>
         </section>
     </main>
 
