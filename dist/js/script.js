@@ -8,6 +8,10 @@ $('#see-more').click(function() {
     $('.block-slideToggle').slideToggle('slow');
 });
 
+$('#see-moree').click(function() {
+    $('.block-slideTogglee').slideToggle('slow');
+});
+
 
 
 
