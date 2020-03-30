@@ -560,23 +560,6 @@ ul, li {
   width: 100%;
   height: auto; }
 
-.wrapper__video {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: auto;
-  margin: 50px 0; }
-
 .command-description {
   font-size: 0.9rem;
   width: 100%;
@@ -790,7 +773,23 @@ ul, li {
 
 /* Меню при нажатии */
 .menu-popup {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: none;
   position: fixed;
   z-index: 3;
@@ -798,7 +797,7 @@ ul, li {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 20px;
   background-color: #4c4c4c;
   -webkit-animation-duration: 0.55s;
           animation-duration: 0.55s;
@@ -827,7 +826,6 @@ ul, li {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin: 0 10px 10px 10px;
   padding: 20px 0 20px 0; }
 
 .menu-popup__header-logo {
@@ -978,13 +976,14 @@ ul, li {
           align-items: center;
   position: fixed;
   z-index: 3;
-  top: -webkit-calc(50% - 12.5vw);
-  top: calc(50% - 12.5vw);
-  left: -webkit-calc(50% - 25vw);
-  left: calc(50% - 25vw);
-  width: 50vw;
-  height: 25vw;
-  padding: 0 10px 0 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 400px;
+  height: auto;
+  padding: 0 10px 20px 10px;
   background-color: #4c4c4c;
   -webkit-box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);
           box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2); }
@@ -1050,6 +1049,8 @@ ul, li {
           align-items: center;
   min-width: 20vw;
   margin-top: 1.5vw; }
+  .contacts__social-block li {
+    margin: 5px; }
 
 .contacts-close {
   position: absolute;
@@ -1408,7 +1409,10 @@ ul, li {
   .logo {
     min-width: 30vw; }
   .lang {
-    display: none; }
+    font-size: 0.8rem;
+    min-width: 1vw;
+    white-space: nowrap;
+    margin: 0 20px 0 20px; }
   .ru {
     margin-right: 0.5vw; }
   .telephone {
@@ -1490,7 +1494,7 @@ ul, li {
             align-items: center;
     margin-bottom: 2vw; }
   .wrapper-image-holder {
-    margin-bottom: 5vw; }
+    margin: 0 0 5vw 0; }
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1574,17 +1578,36 @@ ul, li {
     width: 7vw;
     height: 7vw;
     max-width: 41px; }
+  .modal-close::before,
+  .modal-close::after {
+    width: 18px;
+    height: 4px;
+    margin: -2px 0 0 -9px; } }
+
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   /* форма обратной связи*/
-  .feedback-form {
+  /* Наши контакты * */ }
+  .modal-close::after .feedback-form {
     width: 80vw;
     min-width: 80vw; }
-  .wrapper__label_and_input {
+  .modal-close::after .wrapper__label_and_input {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .wrapper-tel,
-  .wrapper-name,
-  .wrapper-email {
-    margin-top: 10px; } }
+  .modal-close::after .wrapper-tel,
+  .modal-close::after .wrapper-name,
+  .modal-close::after .wrapper-email {
+    margin-top: 10px; }
+  .modal-close::after .contacts {
+    width: 80vw;
+    min-width: 80vw; }

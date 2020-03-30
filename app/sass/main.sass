@@ -529,15 +529,6 @@ ul, li
   width: 100%
   height: auto
 
-.wrapper__video
-  display: flex
-  justify-content: space-between
-  align-items: center
-  width: 100%
-  height: auto
-
-  margin: 50px 0
-
 .command-description
   font-size: 0.9rem
 
@@ -698,7 +689,10 @@ ul, li
 
 
 .menu-popup
-  display: block
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
   display: none
   position: fixed
   z-index: 3
@@ -708,7 +702,7 @@ ul, li
   width: 100%
   height: 100%
 
-  padding: 0 30px
+  padding: 0 20px
 
   background-color: rgba(76,76,76,1)
 
@@ -726,7 +720,6 @@ ul, li
 
   width: 100%
 
-  margin: 0 10px 10px 10px
   padding: 20px 0 20px 0
 
 .menu-popup__header-logo
@@ -864,13 +857,14 @@ ul, li
   align-items: center
   position: fixed
   z-index: 3
-  top: calc(50% - 12.5vw)
-  left: calc(50% - 25vw)
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
 
-  width: 50vw
-  height: 25vw
+  min-width: 400px
+  height: auto
 
-  padding: 0 10px 0 10px
+  padding: 0 10px 20px 10px
 
   background-color: #4c4c4c
 
@@ -915,7 +909,8 @@ ul, li
 
   margin-top: 1.5vw
 
-
+  li
+    margin: 5px
 .contacts-close
   position: absolute
   content: ""
@@ -1221,7 +1216,10 @@ ul, li
     min-width: 30vw
   
   .lang 
-    display: none
+    font-size: 0.8rem
+    min-width: 1vw
+    white-space: nowrap
+    margin: 0 20px 0 20px 
 
   .ru
     margin-right: 0.5vw
@@ -1312,7 +1310,7 @@ ul, li
     margin-bottom: 2vw
 
   .wrapper-image-holder
-    margin-bottom: 5vw
+    margin: 0 0 5vw 0
 
   .footer
     flex-direction: column
@@ -1380,6 +1378,19 @@ ul, li
     width: 7vw
     height: 7vw
     max-width: 41px
+
+  .modal-close::before,
+  .modal-close::after
+    width: 18px
+    height: 4px
+
+    margin: -2px 0 0 -9px
+.modal-close::before
+  transform: rotate(45deg)
+
+.modal-close::after
+  transform: rotate(-45deg)
+  
     
 
   /* форма обратной связи*/
@@ -1396,3 +1407,9 @@ ul, li
   .wrapper-email
     margin-top: 10px
   
+
+  /* Наши контакты *///I
+  
+  .contacts
+    width: 80vw
+    min-width: 80vw
