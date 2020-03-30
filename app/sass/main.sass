@@ -65,6 +65,9 @@ label
 .hidden
   visibility: hidden
 
+.display-none
+  display: none
+  
 h1, h2, h3, h4, h5, h6, p, ul, li 
   font-weight: 400
   list-style: none
@@ -119,12 +122,11 @@ ul, li
   left: 0
   z-index: 3
 
-  width: calc(100vw - 37px)
+  width: 100%
   height: 85px
 
-  padding: 20px 20px 
-  margin: 0 10px
-
+  padding: 0 20px
+  
   background-color: rgba(255,255,255,1)
   
   visibility: visible
@@ -137,10 +139,6 @@ ul, li
   transform: translateY(-100%)
   transition: all .4s ease-out
  
-.logo
-  width: 195px
-  height: 45px
-  
 .right-menu
   display: flex
   justify-content: center
@@ -151,7 +149,7 @@ ul, li
   justify-content: center
   align-items: center
   
-  min-width: 195px
+  width: 195px
 
   margin-right: 10px
 
@@ -208,15 +206,13 @@ ul, li
 
 
 .main
-  margin: 0 10px 0 10px
   padding-bottom: 60px
 
-.section-project
-  margin: 60px 0 0px 0
-  padding: 1px 0px
+
 
 .section-slider
-  margin: 115px 0 0px 0
+  margin: 115px 0 0 0
+  padding: 0 20px
 
 .slider
   position: relative
@@ -224,8 +220,9 @@ ul, li
   max-width: 100%
   height: auto
   max-height: 600px
-  margin: 0 20px
   overflow: hidden
+
+  border-radius: 10px
 
 .item
   width: 100%
@@ -329,6 +326,9 @@ ul, li
 //         opacity: 1
 
 
+.section-project
+  margin: 60px 0 0px 0
+  padding: 0 20px
 
 .section__wrapper
   display: flex
@@ -342,7 +342,6 @@ ul, li
   max-width: 1920px
 
   margin: 0 auto
-  padding: 0 20px
 
 .block-slideToggle
   display: none
@@ -428,7 +427,7 @@ ul, li
 
 .section-service
   margin: 60px auto 0 auto
-  padding: 1px 0
+  padding: 0 20px
   
 .section-service__wrapper
   display: flex
@@ -441,11 +440,11 @@ ul, li
   max-width: 1920px
 
   margin: 0 auto
-  padding: 0 20px
 
 .service__article
   position: relative
   color: #ffffff
+  overflow: hidden
   
   width: 32%
   height: 32vw
@@ -453,6 +452,8 @@ ul, li
   margin-bottom: 2%
 
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1)
+
+  border-radius: 10px
 
 .service__article__wrapper
   overflow: hidden
@@ -655,7 +656,8 @@ ul, li
   min-height: 50px
 
 .wrapper-footer-logo
-  min-width: 100%
+  width: 100%
+  max-width: 250px
   height: auto
 
 .footer-logo
@@ -696,20 +698,17 @@ ul, li
 
 
 .menu-popup
-  display: flex
+  display: block
   display: none
-  flex-direction: column
-  justify-content: flex-start
-  align-items: center
   position: fixed
-  z-index: 2
+  z-index: 3
   top: 0
   left: 0
 
   width: 100%
   height: 100%
 
-  padding: 0 10px 0 10px
+  padding: 0 30px
 
   background-color: rgba(76,76,76,1)
 
@@ -727,18 +726,21 @@ ul, li
 
   width: 100%
 
+  margin: 0 10px 10px 10px
   padding: 20px 0 20px 0
-  margin: 0 10px 0 10px
-
-  border-bottom: 2px solid #ffffff
 
 .menu-popup__header-logo
+  display: flex
+  justify-content: center
+  align-items: center
+  
   width: 195px
-  height: 45px
+
+  margin-right: 10px
 
 .menu-popup-logo__img
   width: 195px
-  height: 45px
+  height: auto
 
 .menu-popup__right-menu
   display: flex
@@ -784,7 +786,6 @@ ul, li
   position: relative
   cursor: pointer
 
-
   width: 41px
   height: 41px
 
@@ -797,11 +798,14 @@ ul, li
 .modal-close::after
   position: absolute
   content: ""
-  top: 19px
-  left: 9px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
     
   width: 24px
   height: 4px
+
+  margin: -2px 0 0 -12px
 
   background-color: #ffffff
 
@@ -814,29 +818,30 @@ ul, li
   transform: rotate(-45deg)
   
 .wrapper__menu-list
-  display: flex
-  justify-content: center
-  align-items: center
-  
   width: 100%
   height: 100%
   
+  
 .menu-list
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: center
+  position: absolute
+  top: 50vh
+  left: 50vw
+  transform: translate(-50%, -50%)
 
-  margin-top: -50px
+  text-align: center
+
 
 .menu-list__item
   font-size: 26px
   line-height: 24px
 
-  margin-top: 25px
+  margin-top: 30px
 
   a
-    color: #ffffff
+    color: rgba(255,255,255,0.9)
+
+  a:hover
+    color: rgba(255,255,255,1)
   
 .menu-list__items:nth-child(1)
   margin-top: 0
@@ -966,22 +971,19 @@ ul, li
   align-items: center
   position: fixed
   z-index: 5
-  top: calc(45% - 20vw)
-  left: calc(50% - 25vw)
+  top: 50%
+  left: 50%
 
-  min-width: 50vw
-  height: 40vw
+  min-width: 600px
+  height: auto
 
-  margin-top: 3vw
   padding: 0 20px 10px 20px
 
   background-color: #4c4c4c
 
   box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2)
 
-  animation-duration: 0.55s
-  animation-fill-mode: both
-  animation-name: fadeInDown
+  transform: translate(-50%, -50%)
   
 .feedback-form-visible
   display: flex
@@ -999,16 +1001,19 @@ ul, li
   
 .wrapper__label_and_input
   display: flex
+  flex-direction: row
   justify-content: space-between
   align-items: center
 
   width: 100%
+  height: auto
 
-  margin-top: 5vw
+  margin-top: 60px
 
 .wrapper-tel,
 .wrapper-name,
 .wrapper-email
+  font-size: 0.9rem
   display: flex
   flex-direction: column
   justify-content: center
@@ -1023,7 +1028,7 @@ ul, li
   text-align: center
 
   min-width: 12vw 
-  height: 2vw
+  height: 30px
   
   margin-top: 10px
 
@@ -1061,6 +1066,9 @@ ul, li
 
   margin-top: 1.5vw
   margin-bottom: 4vw
+
+.feedback-form__social-block li
+  margin-right: 10px
 
 .white-line
   min-width: 100%
@@ -1186,7 +1194,7 @@ ul, li
   
   .service__article
     width: 100% 
-    height: 49vw
+    height: 50vw 
   
   .persons
     justify-content: space-evenly
@@ -1213,10 +1221,7 @@ ul, li
     min-width: 30vw
   
   .lang 
-    font-size: 0.8rem
-    min-width: 1vw
-    white-space: nowrap
-    margin: 0 20px 0 20px 
+    display: none
 
   .ru
     margin-right: 0.5vw
@@ -1272,17 +1277,15 @@ ul, li
     border-radius: 7px
   
   .project__article
-    width: 90%
-    height: 90vw
+    margin-right: 2% 
+  
+  .project__article:nth-child(2n)
+    margin-right: 0
 
   .section__wrapper,
   .section-service__wrapper
     justify-content: center
   
-  .service__article
-    width: 90% 
-    height: 90vw
-
   .person
     width: 30vw
     height: 30vw
@@ -1294,7 +1297,7 @@ ul, li
     min-height: 25vw 
 
   .see-more
-    font-size: 0.7rem
+    font-size: 0.6rem
     line-height: 17px
 
     width: 18vw
@@ -1321,7 +1324,15 @@ ul, li
   .footer-wrapper__left
     justify-content: center
     align-items: center
-    width: 100%
+
+    width: 225px
+
+  .license-text
+    font-size: 0.8rem
+    color: #ffffff
+
+    margin-top: -7px //для пикселпёрфекта
+    padding: 0
 
   .footer-wrapper__center
     flex-direction: column
@@ -1330,6 +1341,10 @@ ul, li
 
     margin-top: 30px
 
+  .wrapper-footer-logo
+    width: 225px
+    height: auto
+  
   .footer-logo
     width: 100%
     height: auto
@@ -1344,3 +1359,40 @@ ul, li
     min-height: 20px
 
 
+  /*Меню при нажатии */
+
+  .menu-popup__header-logo
+    min-width: 30vw
+
+  .menu-popup__lang
+    font-size: 0.8rem
+    min-width: 1vw
+    white-space: nowrap
+    margin: 0 20px 0 20px 
+
+  .menu-popup__ru
+    margin-right: 0.5vw
+    
+  .envelope-span
+    display: none
+
+  .modal-close
+    width: 7vw
+    height: 7vw
+    max-width: 41px
+    
+
+  /* форма обратной связи*/
+
+  .feedback-form
+    width: 80vw
+    min-width: 80vw
+  
+  .wrapper__label_and_input
+    flex-direction: column
+
+  .wrapper-tel,
+  .wrapper-name,
+  .wrapper-email
+    margin-top: 10px
+  

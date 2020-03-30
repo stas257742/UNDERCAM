@@ -95,12 +95,12 @@ $(window).scroll(function() {
 
 
 
-var actionBookmark = document.querySelectorAll(".menu-burger"); // 1.
+var actionBookmark = document.querySelectorAll(".wrapper-burger-menu"); // 1.
 console.log(actionBookmark);
 console.log(actionBookmark.length);
 
+var closeMenu = document.querySelector(".header");
 var popupBasket = document.querySelector(".menu-popup");
-
 var close = popupBasket.querySelector(".modal-close");
 
 for (var i = 0; i < actionBookmark.length; i++) {
@@ -114,11 +114,13 @@ close.addEventListener("click", function(evt) {
     evt.preventDefault();
     popupBasket.classList.remove("menu-popup-visible");
 
+
     window.addEventListener("keydown", function(evt) {
         if (evt.keyCode === 27) {
             evt.preventDefault();
             if (popupBasket.classList.contains("menu-popup-visible")) {
                 popupBasket.classList.remove("menu-popup-visible");
+                closeMenu.classList.remove("out");
             }
         }
     })
@@ -142,7 +144,7 @@ $(document).ready(function() {
         $('body,html').animate({
             scrollTop: top
         }, 900);
-        asd.removeClass('menu-popup-visible')
+        asd.removeClass('menu-popup-visible');
     });
 });
 
