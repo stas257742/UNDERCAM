@@ -218,6 +218,7 @@ ul, li {
 .main {
   padding-bottom: 60px; }
 
+/*Сладйер*/
 .section-slider {
   margin: 115px 0 0 0;
   padding: 0 20px; }
@@ -315,6 +316,7 @@ ul, li {
   background-color: #aaa; }
 
 /*Анимация*/
+/* Проекты*/
 .section-project {
   margin: 60px 0 0px 0;
   padding: 0 20px; }
@@ -438,6 +440,7 @@ ul, li {
 .number-9 {
   background-color: #bc6e6e; }
 
+/*Услуги*/
 .section-service {
   margin: 60px auto 0 auto;
   padding: 0 20px; }
@@ -517,6 +520,7 @@ ul, li {
     text-align: center;
     margin-top: 1vw; }
 
+/*Команда*/
 .section-command {
   margin: 60px 0 0px 0;
   padding: 1px 20px; }
@@ -526,6 +530,11 @@ ul, li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -560,15 +569,18 @@ ul, li {
   width: 100%;
   height: auto; }
 
+.slider-button {
+  display: none; }
+
+.slider-dots {
+  display: none; }
+
 .command-description {
   font-size: 0.9rem;
   width: 100%;
   margin-right: 20px; }
 
-.video {
-  width: 50%;
-  height: auto; }
-
+/*Отзывы*/
 .section-reviews {
   margin: 40px 0 0px 0;
   padding: 1px 20px; }
@@ -1109,10 +1121,11 @@ ul, li {
   z-index: 5;
   top: 50%;
   left: 50%;
-  min-width: 600px;
-  height: auto;
+  width: 50%;
+  max-height: 90vh;
   padding: 0 20px 10px 20px;
   background-color: #4c4c4c;
+  border-radius: 10px;
   -webkit-box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);
           box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2);
   -webkit-transform: translate(-50%, -50%);
@@ -1144,8 +1157,9 @@ ul, li {
       -ms-flex-align: center;
           align-items: center;
   width: 100%; }
-  .user-form .button-send {
-    margin-top: 3vw; }
+
+.button-send {
+  margin-top: 3vw; }
 
 .wrapper__label_and_input {
   display: -webkit-box;
@@ -1157,22 +1171,24 @@ ul, li {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%;
   height: auto;
-  margin-top: 60px; }
+  margin-top: 40px; }
 
 .wrapper-tel,
 .wrapper-name,
 .wrapper-email {
-  font-size: 0.9rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1192,13 +1208,21 @@ ul, li {
           align-items: center;
   font-size: 17px;
   line-height: 24px;
-  color: #ffffff; }
+  color: #ffffff;
+  text-align: center;
+  min-width: 110px;
+  max-width: 10vw;
+  margin: 20px; }
+  .wrapper-tel label,
+  .wrapper-name label,
+  .wrapper-email label {
+    font-size: 1rem; }
 
 .user-tel,
 .user-name,
 .user-email {
   text-align: center;
-  min-width: 12vw;
+  width: 140px;
   height: 30px;
   margin-top: 10px;
   border: none;
@@ -1218,25 +1242,29 @@ ul, li {
 .feedback-form__p {
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
   color: #ffffff;
-  margin-top: 6vw; }
+  margin-top: 3vw; }
 
 .feedback-form__social-block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   min-width: 20vw;
   margin-top: 1.5vw;
-  margin-bottom: 4vw; }
+  margin-bottom: 1vw; }
 
 .feedback-form__social-block li {
   margin-right: 10px; }
@@ -1389,21 +1417,82 @@ ul, li {
     width: 100%;
     height: 50vw; }
   .persons {
-    -webkit-box-pack: space-evenly;
-    -webkit-justify-content: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly; }
+    position: relative;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 35px 0 20px 0; }
+  .item1 {
+    width: 100%;
+    height: auto; }
   .person {
-    width: 28vw;
-    height: 28vw;
-    margin-bottom: 5%; }
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    width: 20vw;
+    height: 20vw; }
+  .slider-button {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 27px;
+    height: 41px;
+    outline: none;
+    border: none; }
+  .slider-command-button-left {
+    fill: #4c4c4c;
+    top: 50%;
+    left: 0px;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 10;
+    margin-left: 8px; }
+  .slider-command-button-right {
+    fill: #4c4c4c;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+        -ms-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+    top: 50%;
+    right: 0px;
+    margin-right: -19px; }
+  .slider-dots {
+    display: block; }
   .wrapper-image-holder {
     min-width: 18vw;
     min-height: 18vw; }
   .see-more {
     font-size: 0.9rem;
     width: 15vw;
-    height: 15vw; } }
+    height: 15vw; }
+  /*Форма обратной сязи*/
+  .feedback-form {
+    width: 70vw; }
+  .wrapper__label_and_input {
+    margin-top: 10px; }
+  .wrapper-tel,
+  .wrapper-name,
+  .wrapper-email {
+    margin-top: 10px; }
+    .wrapper-tel label,
+    .wrapper-name label,
+    .wrapper-email label {
+      font-size: 0.9rem;
+      line-height: 18px; }
+  .button-send {
+    margin-top: 1vw; }
+  .feedback-form__p {
+    font-size: 0.9rem;
+    line-height: 18px; }
+  .feedback-form__contacts {
+    font-size: 0.9rem;
+    line-height: 18px; }
+  .feedback-form__contacts_adress {
+    font-size: 0.8rem;
+    line-height: 18px; } }
 
 @media (max-width: 640px) {
   .logo {
@@ -1582,32 +1671,32 @@ ul, li {
   .modal-close::after {
     width: 18px;
     height: 4px;
-    margin: -2px 0 0 -9px; } }
-
-.modal-close::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-.modal-close::after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    margin: -2px 0 0 -9px; }
+  .modal-close::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .modal-close::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
   /* форма обратной связи*/
-  /* Наши контакты * */ }
-  .modal-close::after .feedback-form {
+  .feedback-form {
     width: 80vw;
-    min-width: 80vw; }
-  .modal-close::after .wrapper__label_and_input {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .modal-close::after .wrapper-tel,
-  .modal-close::after .wrapper-name,
-  .modal-close::after .wrapper-email {
-    margin-top: 10px; }
-  .modal-close::after .contacts {
+    max-height: 90vh; }
+  .wrapper-email {
+    margin-top: 0; }
+  /* Наши контакты */
+  .contacts {
     width: 80vw;
-    min-width: 80vw; }
+    min-width: 80vw; } }
+
+@media (max-width: 240px) {
+  .wrapper-burger-menu {
+    width: 12vw; }
+  .logo {
+    max-width: 50vw; }
+  .lang {
+    display: none; }
+  .telephone {
+    display: none; } }

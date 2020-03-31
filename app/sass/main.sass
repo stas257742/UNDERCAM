@@ -210,6 +210,10 @@ ul, li
 
 
 
+/*Сладйер*/
+
+
+
 .section-slider
   margin: 115px 0 0 0
   padding: 0 20px
@@ -326,6 +330,12 @@ ul, li
 //         opacity: 1
 
 
+
+
+/* Проекты*/
+
+
+
 .section-project
   margin: 60px 0 0px 0
   padding: 0 20px
@@ -425,6 +435,12 @@ ul, li
 .number-9
   background-color: #bc6e6e
 
+
+
+/*Услуги*/
+
+
+
 .section-service
   margin: 60px auto 0 auto
   padding: 0 20px
@@ -494,12 +510,17 @@ ul, li
 
     margin-top: 1vw
 
+
+/*Команда*/
+
+
 .section-command
   margin: 60px 0 0px 0
   padding: 1px 20px
 
 .persons
   display: flex
+  flex-direction: row
   justify-content: space-between
   align-items: center
   flex-wrap: wrap
@@ -529,6 +550,12 @@ ul, li
   width: 100%
   height: auto
 
+.slider-button
+  display: none
+  
+.slider-dots
+  display: none
+  
 .command-description
   font-size: 0.9rem
 
@@ -536,10 +563,12 @@ ul, li
   
   margin-right: 20px
 
-.video
-  width: 50%
-  height: auto
 
+
+/*Отзывы*/
+
+
+  
 .section-reviews
   margin: 40px 0 0px 0
   padding: 1px 20px
@@ -969,13 +998,14 @@ ul, li
   top: 50%
   left: 50%
 
-  min-width: 600px
-  height: auto
+  width: 50%
+  max-height: 90vh
 
   padding: 0 20px 10px 20px
 
   background-color: #4c4c4c
 
+  border-radius: 10px
   box-shadow: 1px 1px 7px 1px rgba(195, 195, 195, 0.2)
 
   transform: translate(-50%, -50%)
@@ -991,24 +1021,24 @@ ul, li
 
   width: 100%
 
-  .button-send
-    margin-top: 3vw
+.button-send
+  margin-top: 3vw
   
 .wrapper__label_and_input
   display: flex
   flex-direction: row
-  justify-content: space-between
+  justify-content: center
   align-items: center
+  flex-wrap: wrap
 
   width: 100%
   height: auto
 
-  margin-top: 60px
+  margin-top: 40px
 
 .wrapper-tel,
 .wrapper-name,
 .wrapper-email
-  font-size: 0.9rem
   display: flex
   flex-direction: column
   justify-content: center
@@ -1016,13 +1046,22 @@ ul, li
   font-size: 17px
   line-height: 24px
   color: #ffffff
-  
+  text-align: center
+
+  min-width: 110px
+  max-width: 10vw
+
+  margin: 20px
+
+  label
+    font-size: 1rem
+
 .user-tel,
 .user-name,
 .user-email
   text-align: center
 
-  min-width: 12vw 
+  width: 140px 
   height: 30px
   
   margin-top: 10px
@@ -1048,19 +1087,21 @@ ul, li
 .feedback-form__p
   font-size: 18px
   line-height: 24px
+  text-align: center
   color: #ffffff
 
-  margin-top: 6vw
+  margin-top: 3vw
 
 .feedback-form__social-block
   display: flex
-  justify-content: space-between
+  justify-content: center
   align-items: center
+  flex-wrap: wrap
   
   min-width: 20vw
 
   margin-top: 1.5vw
-  margin-bottom: 4vw
+  margin-bottom: 1vw
 
 .feedback-form__social-block li
   margin-right: 10px
@@ -1192,13 +1233,59 @@ ul, li
     height: 50vw 
   
   .persons
-    justify-content: space-evenly
+    position: relative
+
+    width: 100%
+    height: auto
+
+    position: relative
+    overflow: hidden
+
+    margin: 35px 0 20px 0
+
+  .item1
+    width: 100%
+    height: auto
 
   .person
-    width: 28vw
-    height: 28vw
+    top: 50%
+    left: 50%
+    transform: translate(-50%, 0%)
 
-    margin-bottom: 5%
+    width: 20vw
+    height: 20vw
+
+  .slider-button
+    position: absolute
+    display: block
+    content: ""
+
+    width: 27px
+    height: 41px
+
+    outline: none
+    border: none
+
+  .slider-command-button-left
+    fill: #4c4c4c
+    top: 50%
+    left: 0px
+    transform: translate(-50%, -50%)
+    z-index: 10
+
+    margin-left: 8px
+    
+  .slider-command-button-right
+    fill: #4c4c4c
+    transform: translate(-50%, -50%) rotate(180deg) 
+    top: 50%
+    right: 0px
+
+    margin-right: -19px
+
+  
+  .slider-dots
+    display: block
 
   .wrapper-image-holder
  
@@ -1211,7 +1298,39 @@ ul, li
     width: 15vw
     height: 15vw
 
+  /*Форма обратной сязи*/
+
+  .feedback-form
+    width: 70vw
+  
+  .wrapper__label_and_input
+    margin-top: 10px
+
+  .wrapper-tel,
+  .wrapper-name,
+  .wrapper-email
+    margin-top: 10px
+    label
+      font-size: 0.9rem
+      line-height: 18px
+
+  .button-send
+    margin-top: 1vw
+
+  .feedback-form__p
+    font-size: 0.9rem
+    line-height: 18px
+
+  .feedback-form__contacts
+    font-size: 0.9rem
+    line-height: 18px
+
+  .feedback-form__contacts_adress
+    font-size: 0.8rem
+    line-height: 18px
+    
 @media (max-width: 640px) 
+
   .logo
     min-width: 30vw
   
@@ -1385,11 +1504,11 @@ ul, li
     height: 4px
 
     margin: -2px 0 0 -9px
-.modal-close::before
-  transform: rotate(45deg)
+  .modal-close::before
+    transform: rotate(45deg)
 
-.modal-close::after
-  transform: rotate(-45deg)
+  .modal-close::after
+    transform: rotate(-45deg)
   
     
 
@@ -1397,19 +1516,24 @@ ul, li
 
   .feedback-form
     width: 80vw
-    min-width: 80vw
-  
-  .wrapper__label_and_input
-    flex-direction: column
+    max-height: 90vh
 
-  .wrapper-tel,
-  .wrapper-name,
   .wrapper-email
-    margin-top: 10px
-  
+    margin-top: 0
 
-  /* Наши контакты *///I
+  /* Наши контакты */
   
   .contacts
+
     width: 80vw
     min-width: 80vw
+
+@media (max-width: 240px)
+  .wrapper-burger-menu
+    width: 12vw
+  .logo
+    max-width: 50vw
+  .lang
+    display: none
+  .telephone
+    display: none
