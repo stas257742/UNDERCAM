@@ -991,7 +991,6 @@ ul, li
 
 
 .feedback-form
-  display: flex
   display: none
   flex-direction: column
   justify-content: flex-start
@@ -1004,6 +1003,7 @@ ul, li
   width: 50%
   height: auto
 
+  margin: auto 0
   padding: 0 20px 10px 20px
 
   background-color: #4c4c4c
@@ -1185,19 +1185,11 @@ ul, li
 .modal-error  /*класс ошибки анимации*/
   animation: shake 0.6s
 
-@keyframes fadeInDown 
-    0% 
-        opacity: 0
-        transform: translate3d(0px, -100%, 0px)
-    100% 
-        opacity: 1
-        transform: none
     
-@keyframes shake 
-    /*анимация ошибки*/
+@keyframes shake  /*анимация ошибки*/
     0%,
     100% 
-        transform: translateX(0)
+        transform: translate(-100px, -100px)
     
     10%,
     30%,
@@ -1592,12 +1584,12 @@ ul, li
     width: 24px
     height: 18px
   
-.service__article__description 
-  .service__article__description h3 
-    font-size: 1rem
+  .service__article__description 
+    .service__article__description h3 
+      font-size: 1rem
    
-  .service__article__description p 
-    font-size: 0.8rem
+    .service__article__description p 
+      font-size: 0.8rem
    
   
 @media (max-width: 240px) //galaxy mini s
