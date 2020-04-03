@@ -41,7 +41,7 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-/* Основная функция сладера */
+/* Основная функция слайдера */
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("item");
@@ -61,6 +61,56 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+var itemm = $('.itemm');
+/* что бы когда расширяешь экран после 1024 элементы возвращались в исходное положение*/
+if ($(window).width() < 1024) {
+    itemm.addClass('item1');
+}
+/*Слайдер для команды*/
+
+// Первый раз код нужен для того, что бы когда впервые открывашь браузер на ширине менее 1024 пикселя сразу открывался слайдер(иначе все "item1" были display: block)
+// Второй раз этот код нужен для того, что бы когда экран меньше 1024 персоны становились слайдером
+// Третий раз этот код нужен для того, что бы когда экран становился больше 1024 персоны становились в линию.
+
+var slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+function plusSlide1() {
+    showSlides1(slideIndex1 += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide1() {
+    showSlides1(slideIndex1 -= 1);
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide1(m) {
+    showSlides1(slideIndex1 = m);
+}
+
+
+function showSlides1(m) {
+    var j;
+    var slides1 = document.getElementsByClassName("item1");
+    var dots1 = document.getElementsByClassName("slider-dots_item1");
+    if (m > slides1.length) {
+        slideIndex1 = 1
+    }
+    if (m < 1) {
+        slideIndex1 = slides1.length
+    }
+    for (j = 0; j < slides1.length; j++) {
+        slides1[j].style.display = "none";
+    }
+    for (j = 0; j < dots1.length; j++) {
+        dots1[j].className = dots1[j].className.replace(" active1", "");
+    }
+    slides1[slideIndex1 - 1].style.display = "block";
+    dots1[slideIndex1 - 1].className += " active1";
+}
+
 
 
 

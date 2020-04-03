@@ -220,7 +220,7 @@ ul, li
 
 .slider
   position: relative
-    
+
   max-width: 100%
   height: auto
   max-height: 600px
@@ -229,24 +229,36 @@ ul, li
   border-radius: 10px
 
 .item
+  
   width: 100%
   height: auto
 
 .wrapper-slider-description
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
   position: absolute
   content: ""
-  top: 25%
-  right: 10%
+  top: 50%
+  right: 0%
+  transform: translate(-6vw, -50%)
   
   max-width: 270px
   min-width: 270px
-  height: auto
+  height: 100%
 
 .slider .item img 
   object-fit: cover
   width: 100%
   height: auto
 
+.slider-img__desktop
+  display: block
+  
+.slider-img__mobile-version
+  display: none
+  
 .slider-button
   position: absolute
   content: ""
@@ -264,19 +276,22 @@ ul, li
 .slider-button-left
   fill: #ffffff
   top: 45%
-  left: 20px
+  left: 0vw
 
 .slider-button-right
   fill: #ffffff
   transform: rotate(180deg)
   top: 45%
-  right: 20px
+  right: 0vw
 
 .slideText 
+  justify-self: flex-end
   font-family: "Exo 2 Medium", "Cuprum", sans-serif
   font-size: 0.9rem
   color: #ffffff
   overflow: hidden
+
+  margin: auto 0 0 0
 
 .button__more-details
   display: block
@@ -286,12 +301,12 @@ ul, li
   font-size: 15px
   line-height: 24px
   font-weight: normal
-  color: #111111
+  color: #4c4c4c
 
   max-width: 100px
   min-height: 30px
 
-  margin: 50px 0 10px 0px
+  margin: auto 0 40px 0
   padding: 1px 10px 5px 10px
 
   background-color: #ffffff
@@ -313,22 +328,6 @@ ul, li
 .active,
 .slider-dots_item:hover 
   background-color: #aaa
-
-/*Анимация*/
-
-// .slider .item 
-//   -webkit-animation-name: fade
-//   -webkit-animation-duration: 1.5s
-//   animation-name: fade
-//   animation-duration: 1.5s
-
-// @keyframes fade 
-//     from 
-//         opacity: .4
-    
-//     to 
-//         opacity: 1
-
 
 
 
@@ -529,6 +528,9 @@ ul, li
 
   margin: 35px 0 20px 0
 
+.item1
+  display: block
+
 .person
   position: relative
   overflow: hidden
@@ -550,10 +552,10 @@ ul, li
   width: 100%
   height: auto
 
-.slider-button
+.slider-button1
   display: none
   
-.slider-dots
+.slider-dots1
   display: none
   
 .command-description
@@ -843,7 +845,6 @@ ul, li
   width: 100%
   height: 100%
   
-  
 .menu-list
   position: absolute
   top: 50vh
@@ -851,7 +852,6 @@ ul, li
   transform: translate(-50%, -50%)
 
   text-align: center
-
 
 .menu-list__item
   font-size: 26px
@@ -918,6 +918,7 @@ ul, li
   font-size: 18px
   line-height: 24px
   color: #ffffff
+  text-align: center
 
 .contacts__adress
   font-size: 14px
@@ -934,12 +935,14 @@ ul, li
   justify-content: space-between
   align-items: center
   
-  min-width: 20vw
+  // min-width: 20vw
+  width: 100%
 
   margin-top: 1.5vw
 
   li
     margin: 5px
+
 .contacts-close
   position: absolute
   content: ""
@@ -999,7 +1002,7 @@ ul, li
   left: 50%
 
   width: 50%
-  max-height: 90vh
+  height: auto
 
   padding: 0 20px 10px 20px
 
@@ -1134,7 +1137,6 @@ ul, li
 
   margin-top: 0.5vw
 
-
 .feedback-form__close
   position: absolute
   content: ""
@@ -1221,9 +1223,6 @@ ul, li
 
 
 @media (max-width: 1024px) 
-  .wrapper-slider-description
-    right: 8%
-  
   .project__article
     width: 49% 
     height: 49vw
@@ -1255,9 +1254,9 @@ ul, li
     width: 20vw
     height: 20vw
 
-  .slider-button
-    position: absolute
+  .slider-button1
     display: block
+    position: absolute
     content: ""
 
     width: 27px
@@ -1266,6 +1265,10 @@ ul, li
     outline: none
     border: none
 
+  .slider-button__svg1
+    width: 100%
+    height: auto
+    
   .slider-command-button-left
     fill: #4c4c4c
     top: 50%
@@ -1283,10 +1286,35 @@ ul, li
 
     margin-right: -19px
 
-  
-  .slider-dots
+  .slider-dots1
     display: block
+    text-align: center
 
+  .slider-dots_item1
+    cursor: pointer
+    height: 12px
+    width: 12px
+    margin: 0 2px
+    background-color: #ddd
+    border-radius: 50%
+    display: inline-block
+    transition: background-color 0.6s ease
+
+  .active1,
+  .slider-dots_item1:hover 
+    background-color: #aaa
+
+  .slideText
+    font-size: 0.8rem
+
+  .button__more-details
+    margin: auto 0 10px 0 
+
+  /*Услуги*/
+
+  .service__article
+    height: 90vh
+    
   .wrapper-image-holder
  
     min-width: 18vw
@@ -1328,6 +1356,34 @@ ul, li
   .feedback-form__contacts_adress
     font-size: 0.8rem
     line-height: 18px
+
+
+@media (max-width: 800px) 
+  .feedback-form
+    width: 80vw
+  
+  .slideText
+    font-size: 0.7rem
+
+  .button__more-details
+    display: block
+    text-align: center
+    word-wrap: break-word
+
+    font-size: 0.7rem
+    line-height: 18px
+    font-weight: normal
+    color: #4c4c4c
+
+    max-width: 90px
+    min-height: 30px
+
+    margin: auto 0 10px 0
+    padding: 5px 5px 1px 5px
+
+    background-color: #ffffff
+    border-radius: 7px
+    
     
 @media (max-width: 640px) 
 
@@ -1335,10 +1391,7 @@ ul, li
     min-width: 30vw
   
   .lang 
-    font-size: 0.8rem
-    min-width: 1vw
-    white-space: nowrap
-    margin: 0 20px 0 20px 
+   display: none
 
   .ru
     margin-right: 0.5vw
@@ -1350,35 +1403,33 @@ ul, li
 
     margin-right: 23px
 
-  .wrapper-burger-menu
-    width: 7vw
-    max-width: 41px
-
-  .envelope
+  .slider-img__desktop
     display: none
+
+  .slider-img__mobile-version
+    display: block
   
+  .wrapper-slider-description
+    position: absolute
+    content: ""
+    bottom: 0%
+    right: 0%
+    transform: translate(0, 0)
+    z-index: 2
+  
+    max-width: 100%
+    min-width: 100%
+    height: auto
+
   .slider-button
     width: 7vw
     height: 7vw
     max-height: 41px
 
-  .wrapper-slider-description
-    position: absolute
-    content: ""
-    top: 52%
-    left: 0%
-  
-    min-width: 100%
-    height: 100%
-  
   .slideText 
     padding: 5vw 20px
 
   .button__more-details
-    display: block
-    text-align: center
-    word-wrap: break-word
-
     font-size: 0.8rem
     line-height: 24px
     font-weight: normal
@@ -1387,7 +1438,7 @@ ul, li
     max-width: 100px
     min-height: 30px
 
-    margin: 10vw auto
+    margin: 0 auto 20px
     padding: 1px 10px 5px 10px
 
     background-color: #ffffff
@@ -1398,6 +1449,11 @@ ul, li
   
   .project__article:nth-child(2n)
     margin-right: 0
+
+  /*Услуги*/
+
+  .service__article
+    height: 70vh
 
   .section__wrapper,
   .section-service__wrapper
@@ -1482,44 +1538,17 @@ ul, li
     min-width: 30vw
 
   .menu-popup__lang
-    font-size: 0.8rem
-    min-width: 1vw
-    white-space: nowrap
-    margin: 0 20px 0 20px 
+   display: none
 
   .menu-popup__ru
     margin-right: 0.5vw
-    
-  .envelope-span
-    display: none
 
-  .modal-close
-    width: 7vw
-    height: 7vw
-    max-width: 41px
 
-  .modal-close::before,
-  .modal-close::after
-    width: 18px
-    height: 4px
-
-    margin: -2px 0 0 -9px
-  .modal-close::before
-    transform: rotate(45deg)
-
-  .modal-close::after
-    transform: rotate(-45deg)
-  
-    
-
-  /* форма обратной связи*/
+    /* форма обратной связи*/
 
   .feedback-form
     width: 80vw
-    max-height: 90vh
-
-  .wrapper-email
-    margin-top: 0
+    max-height: 100vh
 
   /* Наши контакты */
   
@@ -1528,12 +1557,67 @@ ul, li
     width: 80vw
     min-width: 80vw
 
-@media (max-width: 240px)
+@media (max-width: 414px) //Iphone 7 plus
   .wrapper-burger-menu
     width: 12vw
+
+  .envelope
+    width: 12vw
+    min-width: 0
+    img
+      width: 100%
+      height: auto
+
   .logo
     max-width: 50vw
-  .lang
+
+  .lang,
+  .menu-popup__lang
     display: none
+    
   .telephone
     display: none
+    
+  .modal-close
+    width: 12vw
+    height: 12vw
+    // max-width: 41px
+
+  .envelope-span
+    width: 12vw
+    height: 12vw
+    // max-width: 41px
+
+  .envelope-span__img
+    width: 24px
+    height: 18px
+  
+.service__article__description 
+  .service__article__description h3 
+    font-size: 1rem
+   
+  .service__article__description p 
+    font-size: 0.8rem
+   
+  
+@media (max-width: 240px) //galaxy mini s
+  
+  .wrapper-burger-menu
+    width: 12vw
+    
+  .logo
+    max-width: 50vw
+    
+  .lang
+    display: none
+    
+  .telephone
+    display: none
+    
+  .slideText
+    display: none
+
+  .button__more-details
+    margin: auto auto 10px
+
+  
